@@ -7,9 +7,14 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+protocol WelcomeViewControllerDelegate: AnyObject {
+    func welcomeViewController(_ controller: WelcomeViewController, didFinishWithID id: String?)
+}
+
+final class WelcomeViewController: UIViewController {
     
     var id: String?
+    weak var delegate: WelcomeViewControllerDelegate?
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
@@ -21,7 +26,6 @@ class WelcomeViewController: UIViewController {
         let label = UILabel()
         label.text = "???님\n반가워요!"
         let attributedText = NSMutableAttributedString(string: label.text ?? "")
-        // 줄 간격 설정
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 8
         attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: attributedText.length))
@@ -31,7 +35,6 @@ class WelcomeViewController: UIViewController {
         label.textAlignment = .center
         label.numberOfLines = 2
         label.font = UIFont(name: "Pretendard-Bold", size: 23)
-        
         return label
     }()
     
@@ -42,23 +45,36 @@ class WelcomeViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 6
         button.titleLabel?.font = UIFont(name: "Pretendard-SemiBold", size: 14)
+        button.addTarget(self, action: #selector(backToLoginButtonDidTap), for: .touchUpInside)
         return button
     }()
     
-    
-    @objc
-    private func backToLoginButtonDidTap() {
-        if self.navigationController == nil {
-            self.dismiss(animated: true)
+    @objc private func backToLoginButtonDidTap() {
+        if let navigationController = self.navigationController {
+            navigationController.popViewController(animated: true)
         } else {
-            self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true, completion: nil)
         }
+    }
+    
+    private func bindID() {
+        if let idText = id {
+            self.welcomeLabel.text = "\(idText)님 \n반가워요!"
+            delegate?.welcomeViewController(self, didFinishWithID: idText)
+        } else {
+            print("id값이 존재하지 않습니다.")
+        }
+    }
+    
+    func setLabelText(id: String?) {
+        self.id = id
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .black
-      [imageView, welcomeLabel, mainButton].forEach{self.view.addSubview($0)}
+        [imageView, welcomeLabel, mainButton].forEach { self.view.addSubview($0) }
+        
         imageView.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(view.safeAreaLayoutGuide).offset(20)
@@ -69,7 +85,7 @@ class WelcomeViewController: UIViewController {
         welcomeLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(imageView.snp.bottom).offset(40)
-            $0.width.equalTo(250)
+            $0.width.equalTo(350)
             $0.height.equalTo(80)
         }
         
@@ -79,17 +95,7 @@ class WelcomeViewController: UIViewController {
             $0.width.equalTo(335)
             $0.height.equalTo(52)
         }
-        bindID()
-    }
-    
-    private func bindID() {
-//        guard let idText = id else { return }
         
-        if let idText = id {
-            self.welcomeLabel.text = "\(idText)님 \n반가워요!"
-        } else {
-            print("id값이 존재하지 않습니다.")
-        }
-    
+        bindID()
     }
 }

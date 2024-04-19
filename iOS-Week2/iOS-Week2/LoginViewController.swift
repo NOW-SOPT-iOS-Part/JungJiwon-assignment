@@ -26,7 +26,7 @@ extension UITextField {
     }
 }
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+final class LoginViewController: UIViewController, UITextFieldDelegate {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -246,7 +246,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func loginButtonDidTap() {
-        presentToWelcomeVC()
+        pushToWelcomeVC()
     }
     @objc func findIDButtonTapped() {
             print("아이디 찾기 버튼이 눌렸습니다.")
@@ -272,10 +272,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    private func presentToWelcomeVC() {
+    private func pushToWelcomeVC() {
         let welcomeViewController = WelcomeViewController()
-        welcomeViewController.modalPresentationStyle = .formSheet
-        welcomeViewController.id = idTextField.text
-        self.present(welcomeViewController, animated: true)
+        welcomeViewController.setLabelText(id: idTextField.text)
+        self.navigationController?.pushViewController(welcomeViewController, animated: true)
     }
 }
