@@ -30,13 +30,14 @@
 		87A188572BE0EA4200711132 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188562BE0EA4200711132 /* MainViewController.swift */; };
 		87A188592BE0EC5E00711132 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188582BE0EC5E00711132 /* TabBarViewController.swift */; };
 		87A1885B2BE1295100711132 /* NavigationControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1885A2BE1295100711132 /* NavigationControllerViewController.swift */; };
-		87A1885D2BE1323800711132 /* ScrollableHorizontalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1885C2BE1323800711132 /* ScrollableHorizontalTableView.swift */; };
 		87A1885F2BE55A3900711132 /* ReleaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1885E2BE55A3900711132 /* ReleaseViewController.swift */; };
 		87A188612BE55C5B00711132 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188602BE55C5B00711132 /* SearchViewController.swift */; };
 		87A188632BE55EBC00711132 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188622BE55EBC00711132 /* RecordViewController.swift */; };
 		87A188652BE64DEA00711132 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188642BE64DEA00711132 /* MainCollectionViewCell.swift */; };
 		87A188692BE6512700711132 /* PopularSeriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188682BE6512700711132 /* PopularSeriesModel.swift */; };
 		87A1886B2BE6551C00711132 /* AsiaContentAwardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1886A2BE6551C00711132 /* AsiaContentAwardsModel.swift */; };
+		87A1886D2BE65A4500711132 /* PopularSeriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1886C2BE65A4500711132 /* PopularSeriesCell.swift */; };
+		87A1886F2BE65E9200711132 /* AsiaContentAwardsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1886E2BE65E9200711132 /* AsiaContentAwardsViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,13 +84,14 @@
 		87A188562BE0EA4200711132 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		87A188582BE0EC5E00711132 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		87A1885A2BE1295100711132 /* NavigationControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerViewController.swift; sourceTree = "<group>"; };
-		87A1885C2BE1323800711132 /* ScrollableHorizontalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableHorizontalTableView.swift; sourceTree = "<group>"; };
 		87A1885E2BE55A3900711132 /* ReleaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseViewController.swift; sourceTree = "<group>"; };
 		87A188602BE55C5B00711132 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		87A188622BE55EBC00711132 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		87A188642BE64DEA00711132 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		87A188682BE6512700711132 /* PopularSeriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSeriesModel.swift; sourceTree = "<group>"; };
 		87A1886A2BE6551C00711132 /* AsiaContentAwardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsiaContentAwardsModel.swift; sourceTree = "<group>"; };
+		87A1886C2BE65A4500711132 /* PopularSeriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSeriesCell.swift; sourceTree = "<group>"; };
+		87A1886E2BE65E9200711132 /* AsiaContentAwardsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsiaContentAwardsViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +159,6 @@
 				87A188582BE0EC5E00711132 /* TabBarViewController.swift */,
 				87A188622BE55EBC00711132 /* RecordViewController.swift */,
 				87A1885A2BE1295100711132 /* NavigationControllerViewController.swift */,
-				87A1885C2BE1323800711132 /* ScrollableHorizontalTableView.swift */,
 				87A1885E2BE55A3900711132 /* ReleaseViewController.swift */,
 				87A188602BE55C5B00711132 /* SearchViewController.swift */,
 			);
@@ -209,7 +210,9 @@
 		87A188672BE650D500711132 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				87A1886C2BE65A4500711132 /* PopularSeriesCell.swift */,
 				87A188642BE64DEA00711132 /* MainCollectionViewCell.swift */,
+				87A1886E2BE65E9200711132 /* AsiaContentAwardsViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A1886F2BE65E9200711132 /* AsiaContentAwardsViewCell.swift in Sources */,
 				87A1883F2BE0E91D00711132 /* LoginViewController.swift in Sources */,
 				87A1886B2BE6551C00711132 /* AsiaContentAwardsModel.swift in Sources */,
 				87A188612BE55C5B00711132 /* SearchViewController.swift in Sources */,
@@ -366,10 +370,10 @@
 				87A188632BE55EBC00711132 /* RecordViewController.swift in Sources */,
 				87A188132BE0E86D00711132 /* ViewController.swift in Sources */,
 				87A188652BE64DEA00711132 /* MainCollectionViewCell.swift in Sources */,
-				87A1885D2BE1323800711132 /* ScrollableHorizontalTableView.swift in Sources */,
 				87A188572BE0EA4200711132 /* MainViewController.swift in Sources */,
 				87A188592BE0EC5E00711132 /* TabBarViewController.swift in Sources */,
 				87A1885F2BE55A3900711132 /* ReleaseViewController.swift in Sources */,
+				87A1886D2BE65A4500711132 /* PopularSeriesCell.swift in Sources */,
 				87A1880F2BE0E86D00711132 /* AppDelegate.swift in Sources */,
 				87A1885B2BE1295100711132 /* NavigationControllerViewController.swift in Sources */,
 				87A188692BE6512700711132 /* PopularSeriesModel.swift in Sources */,
