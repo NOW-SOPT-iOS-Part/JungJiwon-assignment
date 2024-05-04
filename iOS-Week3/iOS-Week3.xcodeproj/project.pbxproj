@@ -29,6 +29,14 @@
 		87A188552BE0E96E00711132 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 87A188542BE0E96E00711132 /* SnapKit */; };
 		87A188572BE0EA4200711132 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188562BE0EA4200711132 /* MainViewController.swift */; };
 		87A188592BE0EC5E00711132 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188582BE0EC5E00711132 /* TabBarViewController.swift */; };
+		87A1885B2BE1295100711132 /* NavigationControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1885A2BE1295100711132 /* NavigationControllerViewController.swift */; };
+		87A1885D2BE1323800711132 /* ScrollableHorizontalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1885C2BE1323800711132 /* ScrollableHorizontalTableView.swift */; };
+		87A1885F2BE55A3900711132 /* ReleaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1885E2BE55A3900711132 /* ReleaseViewController.swift */; };
+		87A188612BE55C5B00711132 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188602BE55C5B00711132 /* SearchViewController.swift */; };
+		87A188632BE55EBC00711132 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188622BE55EBC00711132 /* RecordViewController.swift */; };
+		87A188652BE64DEA00711132 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188642BE64DEA00711132 /* MainCollectionViewCell.swift */; };
+		87A188692BE6512700711132 /* PopularSeriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188682BE6512700711132 /* PopularSeriesModel.swift */; };
+		87A1886B2BE6551C00711132 /* AsiaContentAwardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1886A2BE6551C00711132 /* AsiaContentAwardsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +82,14 @@
 		87A1884A2BE0E94700711132 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		87A188562BE0EA4200711132 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		87A188582BE0EC5E00711132 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		87A1885A2BE1295100711132 /* NavigationControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerViewController.swift; sourceTree = "<group>"; };
+		87A1885C2BE1323800711132 /* ScrollableHorizontalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableHorizontalTableView.swift; sourceTree = "<group>"; };
+		87A1885E2BE55A3900711132 /* ReleaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseViewController.swift; sourceTree = "<group>"; };
+		87A188602BE55C5B00711132 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		87A188622BE55EBC00711132 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		87A188642BE64DEA00711132 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		87A188682BE6512700711132 /* PopularSeriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSeriesModel.swift; sourceTree = "<group>"; };
+		87A1886A2BE6551C00711132 /* AsiaContentAwardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsiaContentAwardsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +141,8 @@
 		87A1880D2BE0E86D00711132 /* iOS-Week3 */ = {
 			isa = PBXGroup;
 			children = (
+				87A188672BE650D500711132 /* Cell */,
+				87A188662BE650BC00711132 /* Model */,
 				87A1880E2BE0E86D00711132 /* AppDelegate.swift */,
 				87A188102BE0E86D00711132 /* SceneDelegate.swift */,
 				87A188122BE0E86D00711132 /* ViewController.swift */,
@@ -137,6 +155,11 @@
 				87A188402BE0E93600711132 /* WelcomeViewController.swift */,
 				87A188562BE0EA4200711132 /* MainViewController.swift */,
 				87A188582BE0EC5E00711132 /* TabBarViewController.swift */,
+				87A188622BE55EBC00711132 /* RecordViewController.swift */,
+				87A1885A2BE1295100711132 /* NavigationControllerViewController.swift */,
+				87A1885C2BE1323800711132 /* ScrollableHorizontalTableView.swift */,
+				87A1885E2BE55A3900711132 /* ReleaseViewController.swift */,
+				87A188602BE55C5B00711132 /* SearchViewController.swift */,
 			);
 			path = "iOS-Week3";
 			sourceTree = "<group>";
@@ -172,6 +195,23 @@
 			);
 			name = Fonts;
 			path = "../../iOS-Week2/iOS-Week2/Fonts";
+			sourceTree = "<group>";
+		};
+		87A188662BE650BC00711132 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				87A188682BE6512700711132 /* PopularSeriesModel.swift */,
+				87A1886A2BE6551C00711132 /* AsiaContentAwardsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		87A188672BE650D500711132 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				87A188642BE64DEA00711132 /* MainCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,11 +360,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A1883F2BE0E91D00711132 /* LoginViewController.swift in Sources */,
+				87A1886B2BE6551C00711132 /* AsiaContentAwardsModel.swift in Sources */,
+				87A188612BE55C5B00711132 /* SearchViewController.swift in Sources */,
 				87A188412BE0E93600711132 /* WelcomeViewController.swift in Sources */,
+				87A188632BE55EBC00711132 /* RecordViewController.swift in Sources */,
 				87A188132BE0E86D00711132 /* ViewController.swift in Sources */,
+				87A188652BE64DEA00711132 /* MainCollectionViewCell.swift in Sources */,
+				87A1885D2BE1323800711132 /* ScrollableHorizontalTableView.swift in Sources */,
 				87A188572BE0EA4200711132 /* MainViewController.swift in Sources */,
 				87A188592BE0EC5E00711132 /* TabBarViewController.swift in Sources */,
+				87A1885F2BE55A3900711132 /* ReleaseViewController.swift in Sources */,
 				87A1880F2BE0E86D00711132 /* AppDelegate.swift in Sources */,
+				87A1885B2BE1295100711132 /* NavigationControllerViewController.swift in Sources */,
+				87A188692BE6512700711132 /* PopularSeriesModel.swift in Sources */,
 				87A188112BE0E86D00711132 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

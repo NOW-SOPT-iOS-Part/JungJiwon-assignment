@@ -7,15 +7,12 @@
 
 import UIKit
 
-class TabBarViewController: UITabBarController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let homeVC = LoginViewController()
-        let releaseVC = LoginViewController()
-        let searchVC = LoginViewController()
-        let recordVC = LoginViewController()
+extension UITabBarController {
+    func configureTabBar() {
+        let homeVC = MainViewController()
+        let releaseVC = ReleaseViewController()
+        let searchVC = SearchViewController()
+        let recordVC = RecordViewController()
 
         homeVC.title = "홈"
         releaseVC.title = "공개예정"
@@ -28,10 +25,10 @@ class TabBarViewController: UITabBarController {
         recordVC.tabBarItem.image = UIImage(systemName: "clock")
         
         // 위에 타이틀 text를 항상 크게 보이게 설정
-        homeVC.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always
-        releaseVC.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always
-        searchVC.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always
-        recordVC.navigationItem.largeTitleDisplayMode = UINavigationItem.LargeTitleDisplayMode.always
+        homeVC.navigationItem.largeTitleDisplayMode = .always
+        releaseVC.navigationItem.largeTitleDisplayMode = .always
+        searchVC.navigationItem.largeTitleDisplayMode = .always
+        recordVC.navigationItem.largeTitleDisplayMode = .always
         
         // navigationController의 root view 설정
         let navigationHome = UINavigationController(rootViewController: homeVC)
@@ -45,15 +42,5 @@ class TabBarViewController: UITabBarController {
         navigationLibrary.navigationBar.prefersLargeTitles = true
         
         setViewControllers([navigationHome, navigationRelease, navigationSearch, navigationLibrary], animated: false)
-    }
-    
-    let HEIGHT_TAB_BAR: CGFloat = 100
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        var tabFrame = tabBar.frame
-        tabFrame.size.height = HEIGHT_TAB_BAR
-        tabFrame.origin.y = view.frame.size.height - HEIGHT_TAB_BAR
-        tabBar.frame = tabFrame
     }
 }
