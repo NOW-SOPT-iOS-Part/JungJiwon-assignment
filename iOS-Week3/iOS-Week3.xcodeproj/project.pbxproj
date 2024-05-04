@@ -38,6 +38,8 @@
 		87A1886B2BE6551C00711132 /* AsiaContentAwardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1886A2BE6551C00711132 /* AsiaContentAwardsModel.swift */; };
 		87A1886D2BE65A4500711132 /* PopularSeriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1886C2BE65A4500711132 /* PopularSeriesCell.swift */; };
 		87A1886F2BE65E9200711132 /* AsiaContentAwardsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1886E2BE65E9200711132 /* AsiaContentAwardsViewCell.swift */; };
+		87A188722BE6666A00711132 /* PopularSeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188712BE6666A00711132 /* PopularSeriesViewController.swift */; };
+		87A188742BE6667E00711132 /* AsiaContentAwardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188732BE6667E00711132 /* AsiaContentAwardsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		87A1886A2BE6551C00711132 /* AsiaContentAwardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsiaContentAwardsModel.swift; sourceTree = "<group>"; };
 		87A1886C2BE65A4500711132 /* PopularSeriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSeriesCell.swift; sourceTree = "<group>"; };
 		87A1886E2BE65E9200711132 /* AsiaContentAwardsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsiaContentAwardsViewCell.swift; sourceTree = "<group>"; };
+		87A188712BE6666A00711132 /* PopularSeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSeriesViewController.swift; sourceTree = "<group>"; };
+		87A188732BE6667E00711132 /* AsiaContentAwardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsiaContentAwardsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		87A1880D2BE0E86D00711132 /* iOS-Week3 */ = {
 			isa = PBXGroup;
 			children = (
+				87A188702BE6661900711132 /* ViewController */,
 				87A188672BE650D500711132 /* Cell */,
 				87A188662BE650BC00711132 /* Model */,
 				87A1880E2BE0E86D00711132 /* AppDelegate.swift */,
@@ -153,10 +158,6 @@
 				87A188422BE0E94700711132 /* Fonts */,
 				87A188192BE0E86D00711132 /* LaunchScreen.storyboard */,
 				87A1881C2BE0E86D00711132 /* Info.plist */,
-				87A1883E2BE0E91D00711132 /* LoginViewController.swift */,
-				87A188402BE0E93600711132 /* WelcomeViewController.swift */,
-				87A188562BE0EA4200711132 /* MainViewController.swift */,
-				87A188582BE0EC5E00711132 /* TabBarViewController.swift */,
 				87A188622BE55EBC00711132 /* RecordViewController.swift */,
 				87A1885A2BE1295100711132 /* NavigationControllerViewController.swift */,
 				87A1885E2BE55A3900711132 /* ReleaseViewController.swift */,
@@ -215,6 +216,19 @@
 				87A1886E2BE65E9200711132 /* AsiaContentAwardsViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		87A188702BE6661900711132 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				87A1883E2BE0E91D00711132 /* LoginViewController.swift */,
+				87A188402BE0E93600711132 /* WelcomeViewController.swift */,
+				87A188562BE0EA4200711132 /* MainViewController.swift */,
+				87A188582BE0EC5E00711132 /* TabBarViewController.swift */,
+				87A188712BE6666A00711132 /* PopularSeriesViewController.swift */,
+				87A188732BE6667E00711132 /* AsiaContentAwardsViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,10 +386,12 @@
 				87A188652BE64DEA00711132 /* MainCollectionViewCell.swift in Sources */,
 				87A188572BE0EA4200711132 /* MainViewController.swift in Sources */,
 				87A188592BE0EC5E00711132 /* TabBarViewController.swift in Sources */,
+				87A188742BE6667E00711132 /* AsiaContentAwardsViewController.swift in Sources */,
 				87A1885F2BE55A3900711132 /* ReleaseViewController.swift in Sources */,
 				87A1886D2BE65A4500711132 /* PopularSeriesCell.swift in Sources */,
 				87A1880F2BE0E86D00711132 /* AppDelegate.swift in Sources */,
 				87A1885B2BE1295100711132 /* NavigationControllerViewController.swift in Sources */,
+				87A188722BE6666A00711132 /* PopularSeriesViewController.swift in Sources */,
 				87A188692BE6512700711132 /* PopularSeriesModel.swift in Sources */,
 				87A188112BE0E86D00711132 /* SceneDelegate.swift in Sources */,
 			);

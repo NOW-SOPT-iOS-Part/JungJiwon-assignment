@@ -24,6 +24,11 @@ class AsiaContentAwardsViewCell: UICollectionViewCell {
      required init?(coder: NSCoder) {
          fatalError("init(coder:) has not been implemented")
      }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setLayout()
+    }
 
      private func setLayout() {
          [seriesLabel, seriesImageView].forEach {contentView.addSubview($0)}
@@ -41,10 +46,10 @@ class AsiaContentAwardsViewCell: UICollectionViewCell {
      }
  }
 
-extension AsiaContentAwardsCell {
+extension AsiaContentAwardsViewCell {
     func dataBind(_ awardsData: AsiaContentAwardsModel) {
-        seriesImageView.image = popularData.seriesImage
-        seriesLabel.text = popularData.seriesName
+        seriesImageView.image = awardsData.seriesImage
+        seriesLabel.text = awardsData.seriesName
     }
 }
 
