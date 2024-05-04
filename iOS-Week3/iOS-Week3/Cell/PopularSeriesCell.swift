@@ -24,6 +24,11 @@ class PopularSeriesCell: UICollectionViewCell {
      required init?(coder: NSCoder) {
          fatalError("init(coder:) has not been implemented")
      }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setLayout()
+    }
 
      private func setLayout() {
          [seriesLabel, seriesImageView].forEach {contentView.addSubview($0)}

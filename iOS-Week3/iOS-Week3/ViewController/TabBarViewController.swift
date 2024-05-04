@@ -42,5 +42,6 @@ extension UITabBarController {
         navigationLibrary.navigationBar.prefersLargeTitles = true
         
         setViewControllers([navigationHome, navigationRelease, navigationSearch, navigationLibrary], animated: false)
+        
     }
 }
