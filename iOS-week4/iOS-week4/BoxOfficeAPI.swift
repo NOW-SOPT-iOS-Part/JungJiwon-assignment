@@ -7,6 +7,7 @@
 
 import Foundation
 import Moya
+import SWXMLHash
 
 enum BoxOfficeAPI {
     case dailyBoxOfficeList(targetDt: String)

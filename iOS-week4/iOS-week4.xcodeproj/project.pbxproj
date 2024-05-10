@@ -25,6 +25,8 @@
 		87A188C02BEE466400711132 /* BoxOfficeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188BF2BEE466400711132 /* BoxOfficeAPI.swift */; };
 		87A188C22BEE471000711132 /* BoxOfficeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188C12BEE471000711132 /* BoxOfficeService.swift */; };
 		87A188C42BEE48E200711132 /* BoxOfficeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188C32BEE48E200711132 /* BoxOfficeResult.swift */; };
+		87A188C82BEE4DB100711132 /* BoxOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188C72BEE4DB100711132 /* BoxOfficeViewController.swift */; };
+		87A188CB2BEE534C00711132 /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = 87A188CA2BEE534C00711132 /* SWXMLHash */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,7 @@
 		87A188BF2BEE466400711132 /* BoxOfficeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeAPI.swift; sourceTree = "<group>"; };
 		87A188C12BEE471000711132 /* BoxOfficeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeService.swift; sourceTree = "<group>"; };
 		87A188C32BEE48E200711132 /* BoxOfficeResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeResult.swift; sourceTree = "<group>"; };
+		87A188C72BEE4DB100711132 /* BoxOfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A188CB2BEE534C00711132 /* SWXMLHash in Frameworks */,
 				87A188B92BEE442400711132 /* Moya in Frameworks */,
 				87A188BC2BEE444600711132 /* SnapKit in Frameworks */,
 			);
@@ -131,6 +135,7 @@
 				87A188BF2BEE466400711132 /* BoxOfficeAPI.swift */,
 				87A188C12BEE471000711132 /* BoxOfficeService.swift */,
 				87A188C32BEE48E200711132 /* BoxOfficeResult.swift */,
+				87A188C72BEE4DB100711132 /* BoxOfficeViewController.swift */,
 			);
 			path = "iOS-week4";
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			packageProductDependencies = (
 				87A188B82BEE442400711132 /* Moya */,
 				87A188BB2BEE444600711132 /* SnapKit */,
+				87A188CA2BEE534C00711132 /* SWXMLHash */,
 			);
 			productName = "iOS-week4";
 			productReference = 87A1887E2BEE437000711132 /* iOS-week4.app */;
@@ -247,6 +253,7 @@
 			packageReferences = (
 				87A188B72BEE442400711132 /* XCRemoteSwiftPackageReference "Moya" */,
 				87A188BA2BEE444600711132 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				87A188C92BEE534C00711132 /* XCRemoteSwiftPackageReference "SWXMLHash" */,
 			);
 			productRefGroup = 87A1887F2BEE437000711132 /* Products */;
 			projectDirPath = "";
@@ -301,6 +308,7 @@
 				87A188B22BEE439800711132 /* Config.swift in Sources */,
 				87A188822BEE437000711132 /* AppDelegate.swift in Sources */,
 				87A188842BEE437000711132 /* SceneDelegate.swift in Sources */,
+				87A188C82BEE4DB100711132 /* BoxOfficeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,6 +670,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		87A188C92BEE534C00711132 /* XCRemoteSwiftPackageReference "SWXMLHash" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/drmohundro/SWXMLHash.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -674,6 +690,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 87A188BA2BEE444600711132 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		87A188CA2BEE534C00711132 /* SWXMLHash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87A188C92BEE534C00711132 /* XCRemoteSwiftPackageReference "SWXMLHash" */;
+			productName = SWXMLHash;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

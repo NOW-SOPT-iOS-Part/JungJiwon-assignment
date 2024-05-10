@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SWXMLHash
 
 struct BoxOfficeResult: Codable {
     let boxOfficeType: String

@@ -7,22 +7,23 @@
 
 import UIKit
 
+
 class BoxOfficeViewController: UIViewController {
 
+    let service = BoxOfficeService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let service = BoxOfficeService()
         
-        service.getDailyBoxOfficeList(targetDt: "20240509") { movies, error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-            } else if let movies = movies {
-                for movie in movies {
+        service.getDailyBoxOfficeList(targetDt: "20240509") { result in
+            switch result {
+            case .success(let boxOfficeResult):
+                for movie in boxOfficeResult.dailyBoxOfficeList {
                     print("Rank: \(movie.rank), Title: \(movie.movieNm), Open Date: \(movie.openDt)")
                 }
+            case .failure(let error):
+                print("Error: \(error.localizedDescription)")
             }
         }
     }
 }
-

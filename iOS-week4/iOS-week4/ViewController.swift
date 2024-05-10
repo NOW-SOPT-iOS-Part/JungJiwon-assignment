@@ -7,22 +7,11 @@
 
 import UIKit
 
-class BoxOfficeViewController: UIViewController {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let service = BoxOfficeService()
-        
-        service.getDailyBoxOfficeList(targetDt: "20240509") { movies, error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-            } else if let movies = movies {
-                for movie in movies {
-                    print("Rank: \(movie.rank), Title: \(movie.movieNm), Open Date: \(movie.openDt)")
-                }
-            }
-        }
+        // Do any additional setup after loading the view.
     }
 }
 

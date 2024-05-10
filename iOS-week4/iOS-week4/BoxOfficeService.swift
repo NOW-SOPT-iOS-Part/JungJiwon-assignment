@@ -7,24 +7,24 @@
 
 import Foundation
 import Moya
+import SWXMLHash
 
 class BoxOfficeService {
     let provider = MoyaProvider<BoxOfficeAPI>()
     
-    func getDailyBoxOfficeList(targetDt: String, completion: @escaping ([BoxOfficeModel]?, Error?) -> ()) {
+    func getDailyBoxOfficeList(targetDt: String, completion: @escaping (Result<BoxOfficeResult, Error>) -> ()) {
         provider.request(.dailyBoxOfficeList(targetDt: targetDt)) { result in
             switch result {
             case let .success(response):
                 do {
-                    let movies = try response.map(BoxOfficeResult.self).dailyBoxOfficeList
-                    completion(movies, nil)
-                } catch let error {
-                    completion(nil, error)
+                    let data = try response.map(BoxOfficeResult.self)
+                    completion(.success(data))
+                } catch {
+                    completion(.failure(error))
                 }
             case let .failure(error):
-                completion(nil, error)
+                completion(.failure(error))
             }
         }
     }
 }
-
