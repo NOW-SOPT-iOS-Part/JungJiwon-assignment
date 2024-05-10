@@ -23,6 +23,8 @@
 		87A188BC2BEE444600711132 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 87A188BB2BEE444600711132 /* SnapKit */; };
 		87A188BE2BEE445A00711132 /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188BD2BEE445A00711132 /* BoxOfficeModel.swift */; };
 		87A188C02BEE466400711132 /* BoxOfficeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188BF2BEE466400711132 /* BoxOfficeAPI.swift */; };
+		87A188C22BEE471000711132 /* BoxOfficeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188C12BEE471000711132 /* BoxOfficeService.swift */; };
+		87A188C42BEE48E200711132 /* BoxOfficeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188C32BEE48E200711132 /* BoxOfficeResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		87A188B52BEE43E800711132 /* MoyaLoggingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggingPlugin.swift; sourceTree = "<group>"; };
 		87A188BD2BEE445A00711132 /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
 		87A188BF2BEE466400711132 /* BoxOfficeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeAPI.swift; sourceTree = "<group>"; };
+		87A188C12BEE471000711132 /* BoxOfficeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeService.swift; sourceTree = "<group>"; };
+		87A188C32BEE48E200711132 /* BoxOfficeResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 				87A188B52BEE43E800711132 /* MoyaLoggingPlugin.swift */,
 				87A188BD2BEE445A00711132 /* BoxOfficeModel.swift */,
 				87A188BF2BEE466400711132 /* BoxOfficeAPI.swift */,
+				87A188C12BEE471000711132 /* BoxOfficeService.swift */,
+				87A188C32BEE48E200711132 /* BoxOfficeResult.swift */,
 			);
 			path = "iOS-week4";
 			sourceTree = "<group>";
@@ -287,9 +293,11 @@
 			files = (
 				87A188B62BEE43E800711132 /* MoyaLoggingPlugin.swift in Sources */,
 				87A188862BEE437000711132 /* ViewController.swift in Sources */,
+				87A188C22BEE471000711132 /* BoxOfficeService.swift in Sources */,
 				87A188B42BEE43C900711132 /* NetworkResult.swift in Sources */,
 				87A188BE2BEE445A00711132 /* BoxOfficeModel.swift in Sources */,
 				87A188C02BEE466400711132 /* BoxOfficeAPI.swift in Sources */,
+				87A188C42BEE48E200711132 /* BoxOfficeResult.swift in Sources */,
 				87A188B22BEE439800711132 /* Config.swift in Sources */,
 				87A188822BEE437000711132 /* AppDelegate.swift in Sources */,
 				87A188842BEE437000711132 /* SceneDelegate.swift in Sources */,
