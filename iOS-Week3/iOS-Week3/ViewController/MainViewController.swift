@@ -82,13 +82,13 @@ final class MainViewController: UIViewController {
             $0.leading.equalToSuperview().inset(20)
         }
         popularSeriesViewController.view.snp.makeConstraints {
-            $0.top.equalTo(popularLabel.snp.bottom).offset(14)
-            $0.bottom.equalTo(popularLabel.snp.bottom).offset(200)
+            $0.top.equalTo(popularLabel.snp.bottom)
+            $0.height.equalTo(200)
             $0.leading.trailing.equalToSuperview()
         }
         bears.snp.makeConstraints {
             $0.top.equalTo(popularSeriesViewController.view.snp.bottom).offset(49)
-            $0.bottom.equalTo(popularLabel.snp.bottom).offset(200)
+            $0.height.equalTo(100)
             $0.leading.trailing.equalToSuperview()
         }
         awardsLabel.snp.makeConstraints {
@@ -97,8 +97,9 @@ final class MainViewController: UIViewController {
         }
         asiaContentAwardsViewController.view.snp.makeConstraints {
             $0.top.equalTo(awardsLabel.snp.bottom).offset(14)
-            $0.bottom.equalTo(awardsLabel.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(200)
+            $0.bottom.equalToSuperview()
         }
     }
 }
