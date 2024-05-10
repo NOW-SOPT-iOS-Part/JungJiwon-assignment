@@ -7,7 +7,6 @@
 
 import Foundation
 import Moya
-import SWXMLHash
 
 enum BoxOfficeAPI {
     case dailyBoxOfficeList(targetDt: String)
@@ -15,13 +14,13 @@ enum BoxOfficeAPI {
 
 extension BoxOfficeAPI: TargetType {
     var baseURL: URL {
-        return URL(string: "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice")!
-    }
+            return URL(string: "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice")!
+        }
     
     var path: String {
         switch self {
-            case .dailyBoxOfficeList:
-                return "/searchDailyBoxOfficeList.xml"
+        case .dailyBoxOfficeList:
+            return "/searchDailyBoxOfficeList.json"
         }
     }
     
@@ -31,12 +30,12 @@ extension BoxOfficeAPI: TargetType {
     
     var task: Task {
         switch self {
-            case .dailyBoxOfficeList(let targetDt):
-                return .requestParameters(parameters: ["key": "f5eef3421c602c6cb7ea224104795888", "targetDt": targetDt], encoding: URLEncoding.default)
+        case .dailyBoxOfficeList(let targetDt):
+            return .requestParameters(parameters: ["key": "f5eef3421c602c6cb7ea224104795888", "targetDt": targetDt], encoding: URLEncoding.queryString)
         }
     }
     
-    var headers: [String : String]? {
-        return ["Content-Type": "application/json"]
+    var headers: [String: String]? {
+        return ["Content-type": "application/json"]
     }
 }
