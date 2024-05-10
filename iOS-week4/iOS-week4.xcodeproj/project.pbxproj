@@ -22,6 +22,7 @@
 		87A188B92BEE442400711132 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 87A188B82BEE442400711132 /* Moya */; };
 		87A188BC2BEE444600711132 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 87A188BB2BEE444600711132 /* SnapKit */; };
 		87A188BE2BEE445A00711132 /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188BD2BEE445A00711132 /* BoxOfficeModel.swift */; };
+		87A188C02BEE466400711132 /* BoxOfficeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188BF2BEE466400711132 /* BoxOfficeAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		87A188B32BEE43C900711132 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		87A188B52BEE43E800711132 /* MoyaLoggingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggingPlugin.swift; sourceTree = "<group>"; };
 		87A188BD2BEE445A00711132 /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
+		87A188BF2BEE466400711132 /* BoxOfficeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				87A188B32BEE43C900711132 /* NetworkResult.swift */,
 				87A188B52BEE43E800711132 /* MoyaLoggingPlugin.swift */,
 				87A188BD2BEE445A00711132 /* BoxOfficeModel.swift */,
+				87A188BF2BEE466400711132 /* BoxOfficeAPI.swift */,
 			);
 			path = "iOS-week4";
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				87A188862BEE437000711132 /* ViewController.swift in Sources */,
 				87A188B42BEE43C900711132 /* NetworkResult.swift in Sources */,
 				87A188BE2BEE445A00711132 /* BoxOfficeModel.swift in Sources */,
+				87A188C02BEE466400711132 /* BoxOfficeAPI.swift in Sources */,
 				87A188B22BEE439800711132 /* Config.swift in Sources */,
 				87A188822BEE437000711132 /* AppDelegate.swift in Sources */,
 				87A188842BEE437000711132 /* SceneDelegate.swift in Sources */,
