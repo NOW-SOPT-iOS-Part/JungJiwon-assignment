@@ -17,7 +17,6 @@ struct BoxOfficeResult: Codable {
     let showRange: String
     let dailyBoxOfficeList: [Movie]
 }
-
 struct Movie: Codable {
     let rank: String
     let movieNm: String

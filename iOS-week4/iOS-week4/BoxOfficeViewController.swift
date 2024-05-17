@@ -18,7 +18,7 @@ class BoxOfficeViewController: UIViewController {
     }
 
     func fetchDailyBoxOfficeList() {
-        let targetDt = "20240509" // 원하는 날짜로 설정
+        let targetDt = "20240509"
         BoxOfficeService.shared.dailyBoxOfficeList(targerDt: targetDt) { [weak self] result in
             guard let self = self else { return }
             switch result {
@@ -57,7 +57,6 @@ class BoxOfficeViewController: UIViewController {
     }
 
     func showError(message: String) {
-        // 에러 메시지를 사용자에게 표시하는 등의 처리 수행
         print("Error: \(message)")
     }
 }

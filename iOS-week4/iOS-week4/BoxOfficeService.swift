@@ -22,7 +22,7 @@ extension BoxOfficeService {
                 let statusCode = response.statusCode
                 let data = response.data
 
-                let networkResult = self.judgeStatus(by: statusCode, data, Movie.self)
+                let networkResult = self.judgeStatus(by: statusCode, data, BoxOfficeResponse.self)
                 completion(networkResult)
 
             case .failure:
