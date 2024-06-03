@@ -14,7 +14,7 @@ enum BoxOfficeAPI {
 
 extension BoxOfficeAPI: TargetType {
     var baseURL: URL {
-            return URL(string: "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice")!
+        return Key.Plist.baseURL
         }
     
     var path: String {

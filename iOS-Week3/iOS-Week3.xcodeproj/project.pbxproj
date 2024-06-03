@@ -40,6 +40,7 @@
 		87A1886F2BE65E9200711132 /* AsiaContentAwardsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A1886E2BE65E9200711132 /* AsiaContentAwardsViewCell.swift */; };
 		87A188722BE6666A00711132 /* PopularSeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188712BE6666A00711132 /* PopularSeriesViewController.swift */; };
 		87A188742BE6667E00711132 /* AsiaContentAwardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188732BE6667E00711132 /* AsiaContentAwardsViewController.swift */; };
+		87AA28352C0DC8470060B3A9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AA28342C0DC8470060B3A9 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		87A1886E2BE65E9200711132 /* AsiaContentAwardsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsiaContentAwardsViewCell.swift; sourceTree = "<group>"; };
 		87A188712BE6666A00711132 /* PopularSeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSeriesViewController.swift; sourceTree = "<group>"; };
 		87A188732BE6667E00711132 /* AsiaContentAwardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsiaContentAwardsViewController.swift; sourceTree = "<group>"; };
+		87AA28342C0DC8470060B3A9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		87A1880D2BE0E86D00711132 /* iOS-Week3 */ = {
 			isa = PBXGroup;
 			children = (
+				87AA28362C0DCEF50060B3A9 /* View */,
 				87A188702BE6661900711132 /* ViewController */,
 				87A188672BE650D500711132 /* Cell */,
 				87A188662BE650BC00711132 /* Model */,
@@ -229,6 +232,14 @@
 				87A188732BE6667E00711132 /* AsiaContentAwardsViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		87AA28362C0DCEF50060B3A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				87AA28342C0DC8470060B3A9 /* LoginView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +403,7 @@
 				87A1880F2BE0E86D00711132 /* AppDelegate.swift in Sources */,
 				87A1885B2BE1295100711132 /* NavigationControllerViewController.swift in Sources */,
 				87A188722BE6666A00711132 /* PopularSeriesViewController.swift in Sources */,
+				87AA28352C0DC8470060B3A9 /* LoginView.swift in Sources */,
 				87A188692BE6512700711132 /* PopularSeriesModel.swift in Sources */,
 				87A188112BE0E86D00711132 /* SceneDelegate.swift in Sources */,
 			);
