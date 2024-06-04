@@ -41,6 +41,7 @@
 		87A188722BE6666A00711132 /* PopularSeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188712BE6666A00711132 /* PopularSeriesViewController.swift */; };
 		87A188742BE6667E00711132 /* AsiaContentAwardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A188732BE6667E00711132 /* AsiaContentAwardsViewController.swift */; };
 		87AA28352C0DC8470060B3A9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AA28342C0DC8470060B3A9 /* LoginView.swift */; };
+		87AA28382C0DE5020060B3A9 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AA28372C0DE5020060B3A9 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		87A188712BE6666A00711132 /* PopularSeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSeriesViewController.swift; sourceTree = "<group>"; };
 		87A188732BE6667E00711132 /* AsiaContentAwardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsiaContentAwardsViewController.swift; sourceTree = "<group>"; };
 		87AA28342C0DC8470060B3A9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		87AA28372C0DE5020060B3A9 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				87AA28342C0DC8470060B3A9 /* LoginView.swift */,
+				87AA28372C0DE5020060B3A9 /* WelcomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				87A1886D2BE65A4500711132 /* PopularSeriesCell.swift in Sources */,
 				87A1880F2BE0E86D00711132 /* AppDelegate.swift in Sources */,
 				87A1885B2BE1295100711132 /* NavigationControllerViewController.swift in Sources */,
+				87AA28382C0DE5020060B3A9 /* WelcomeView.swift in Sources */,
 				87A188722BE6666A00711132 /* PopularSeriesViewController.swift in Sources */,
 				87AA28352C0DC8470060B3A9 /* LoginView.swift in Sources */,
 				87A188692BE6512700711132 /* PopularSeriesModel.swift in Sources */,

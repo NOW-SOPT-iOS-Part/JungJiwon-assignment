@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class AsiaContentAwardsViewController: UIViewController {
+final class AsiaContentAwardsViewController: UIViewController {
     
     final let AsiaWidth: CGFloat = 98
     final let AsiaHeight: CGFloat = 170

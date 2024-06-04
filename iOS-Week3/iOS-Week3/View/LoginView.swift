@@ -211,23 +211,3 @@ extension LoginView {
     }
 }
 
-extension LoginView {
-    
-//    func textFieldDidBeginEditing(_ textField: UITextField) {
-//        if textField == idTextField {
-//            loginButton.backgroundColor = UIColor(red: 255/255, green: 20/255, blue: 60/255, alpha: 1)
-//            loginButton.isEnabled = true
-//            idTextField.layer.borderWidth = 2
-//            idTextField.layer.borderColor = UIColor(red: 156/255, green: 156/255, blue: 156/255, alpha: 1).cgColor
-//            passwordTextField.layer.borderWidth = 0
-//            
-//        } else if textField == passwordTextField {
-//            loginButton.backgroundColor = UIColor(red: 255/255, green: 20/255, blue: 60/255, alpha: 1)
-//            loginButton.isEnabled = true
-//            passwordTextField.layer.borderWidth = 2
-//            passwordTextField.layer.borderColor = UIColor(red: 156/255, green: 156/255, blue: 156/255, alpha: 1).cgColor
-//            idTextField.layer.borderWidth = 0
-//                }
-//       }
-    
-}

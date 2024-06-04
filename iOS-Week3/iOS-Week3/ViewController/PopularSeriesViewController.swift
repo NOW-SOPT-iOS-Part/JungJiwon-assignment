@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class PopularSeriesViewController: UIViewController {
+final class PopularSeriesViewController: UIViewController {
     
     final let PopularWidth: CGFloat = 98
     final let PopularHeight: CGFloat = 170
