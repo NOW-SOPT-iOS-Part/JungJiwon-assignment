@@ -8,82 +8,48 @@
 import UIKit
 import SnapKit
 
-final class PopularSeriesViewController: UIViewController {
+class PopularSeriesViewController: UIViewController {
     
-    final let PopularWidth: CGFloat = 98
-    final let PopularHeight: CGFloat = 170
-    final let ItemSpacing: CGFloat = 8
-    final let ItemInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
-
-    private var itemData = PopularSeriesModel.dummy() {
-        didSet {
-            self.collectionView.reloadData()
-        }
+    private var popularSeriesView = PopularSeriesView()
+    
+    lazy var itemData = popularSeriesView.itemData //필요할 때까지 선언되지 않도록. lazy를 쓰지 않으면 초기화 전에 불러지므로 오류가 생김.
+    
+    override func loadView() {
+        view = popularSeriesView
     }
-    //then을 사용하는 이유가 뭘까? 단지 코드의 길이 줄어들어서 편리함 때문인가?
-    private let collectionView : UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .black
-        layout.scrollDirection = .horizontal
-        return collectionView
-    }()
-    
-    private func calculateTotalWidth() -> CGFloat {
-            let count = CGFloat(itemData.count)
-            return PopularWidth * count + ItemSpacing * (count-1)
-        }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .black
-        
-        setLayout()
-        register()
+
         setDelegate()
+        loadView()
         
-        collectionView.frame.size.width = calculateTotalWidth()
+        popularSeriesView.collectionView.frame.size.width = popularSeriesView.calculateTotalWidth()
     }
     
-    //VC에 collectionView 추가
-    private func setLayout() {
-        self.view.addSubview(collectionView)
-        let count = CGFloat(itemData.count)
-        collectionView.snp.makeConstraints {
-            $0.top.leading.trailing.equalTo(self.view.safeAreaLayoutGuide)
-            $0.height.equalTo(PopularHeight)
-            $0.width.equalTo(PopularWidth * count + ItemSpacing * (count-1))
-        }
-    }
-    
-    //사용할 셀 등록
-    private func register() {
-        collectionView.register(
-            PopularSeriesCell.self,
-            forCellWithReuseIdentifier: PopularSeriesCell.identifier
-        )
-    }
     /* extension에서 셀의 개수와 내용을 지정하기 위해 필요한 코드다.
     delegate는 아이템 개수고, dataSource 아이템 내용이다. */
     private func setDelegate() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        popularSeriesView.collectionView.delegate = self
+        popularSeriesView.collectionView.dataSource = self
     }
+    
 }
 
 extension PopularSeriesViewController: UICollectionViewDelegateFlowLayout {
     //각 셀의 크기 설정
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: PopularWidth, height: PopularHeight)
+        return CGSize(width: popularSeriesView.PopularWidth, height: popularSeriesView.PopularHeight)
     }
     //섹션의 가로 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return ItemSpacing
+        return popularSeriesView.ItemSpacing
     }
     //섹션의 여백
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return ItemInset
+        return popularSeriesView.ItemInset
     }
 }
 

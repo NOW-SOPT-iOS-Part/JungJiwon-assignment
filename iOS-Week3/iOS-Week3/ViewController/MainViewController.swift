@@ -26,10 +26,10 @@ final class MainViewController: UIViewController {
 
 extension MainViewController {
     func configureTabBar() {
-        let tabBarController = UITabBarController()
+        let tabBarController = TabBarViewController()
         tabBarController.configureTabBar()
         
-        // Present the tab bar controller
+
         present(tabBarController, animated: false, completion: nil)
     }
 }

@@ -7,7 +7,13 @@
 
 import UIKit
 
-extension UITabBarController {
+class TabBarViewController: UITabBarController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureTabBar()
+    }
+    
     func configureTabBar() {
         let homeVC = MainViewController()
         let releaseVC = ReleaseViewController()
