@@ -45,6 +45,7 @@
 		87AA283A2C0F005D0060B3A9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AA28392C0F005D0060B3A9 /* MainView.swift */; };
 		87AA283C2C11BC320060B3A9 /* PopularSeriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AA283B2C11BC320060B3A9 /* PopularSeriesView.swift */; };
 		87AA283E2C11CB740060B3A9 /* AsiaContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AA283D2C11CB740060B3A9 /* AsiaContentView.swift */; };
+		87AA28412C11E2180060B3A9 /* PopularSeriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87AA28402C11E2180060B3A9 /* PopularSeriesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		87AA28392C0F005D0060B3A9 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		87AA283B2C11BC320060B3A9 /* PopularSeriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSeriesView.swift; sourceTree = "<group>"; };
 		87AA283D2C11CB740060B3A9 /* AsiaContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsiaContentView.swift; sourceTree = "<group>"; };
+		87AA28402C11E2180060B3A9 /* PopularSeriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSeriesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		87A1880D2BE0E86D00711132 /* iOS-Week3 */ = {
 			isa = PBXGroup;
 			children = (
+				87AA283F2C11E2020060B3A9 /* ViewModel */,
 				87AA28362C0DCEF50060B3A9 /* View */,
 				87A188702BE6661900711132 /* ViewController */,
 				87A188672BE650D500711132 /* Cell */,
@@ -252,6 +255,14 @@
 				87AA283D2C11CB740060B3A9 /* AsiaContentView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		87AA283F2C11E2020060B3A9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				87AA28402C11E2180060B3A9 /* PopularSeriesViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A1886F2BE65E9200711132 /* AsiaContentAwardsViewCell.swift in Sources */,
+				87AA28412C11E2180060B3A9 /* PopularSeriesViewModel.swift in Sources */,
 				87AA283A2C0F005D0060B3A9 /* MainView.swift in Sources */,
 				87A1883F2BE0E91D00711132 /* LoginViewController.swift in Sources */,
 				87A1886B2BE6551C00711132 /* AsiaContentAwardsModel.swift in Sources */,
