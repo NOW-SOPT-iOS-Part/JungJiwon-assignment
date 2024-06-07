@@ -24,7 +24,7 @@ final class AsiaContentView: UIView {
         layout.scrollDirection = .horizontal
         return collectionView
     }()
-    
+    //Q. 얘를 VM으로 빼야하는데..setuplayout에서 itemdata.count를 이용하고 있어서 어떻게 해야할 지 모르겠음
     var itemData = AsiaContentAwardsModel.dummy() {
         didSet {
             collectionView.reloadData()

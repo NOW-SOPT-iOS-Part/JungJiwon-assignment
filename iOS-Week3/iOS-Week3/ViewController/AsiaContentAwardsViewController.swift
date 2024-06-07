@@ -11,8 +11,8 @@ import SnapKit
 final class AsiaContentAwardsViewController: UIViewController {
     
     private var asiaContentView = AsiaContentView()
+    private var asiaContentViewModel = AsiaContentViewModel()
     
-    lazy var itemData = asiaContentView.itemData
     override func loadView() {
         view = asiaContentView
     }
@@ -22,12 +22,11 @@ final class AsiaContentAwardsViewController: UIViewController {
         self.view.backgroundColor = .black
         
         setDelegate()
+        loadView()
         
         asiaContentView.collectionView.frame.size.width = asiaContentView.calculateTotalWidth()
     }
-    
-    /* extension에서 셀의 개수와 내용을 지정하기 위해 필요한 코드다.
-    delegate는 아이템 개수고, dataSource 아이템 내용이다. */
+
     private func setDelegate() {
         asiaContentView.collectionView.delegate = self
         asiaContentView.collectionView.dataSource = self
@@ -51,12 +50,13 @@ extension AsiaContentAwardsViewController: UICollectionViewDelegateFlowLayout {
 
 extension AsiaContentAwardsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return itemData.count
+        return asiaContentViewModel.numberOfItemsInSection(section: section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AsiaContentAwardsViewCell.identifier, for: indexPath) as? AsiaContentAwardsViewCell else { return UICollectionViewCell() }
-        cell.dataBind(itemData[indexPath.item])
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularSeriesCell.identifier, for: indexPath) as? PopularSeriesCell else { return UICollectionViewCell() }
+        let item = asiaContentViewModel.itemAtIndex(indexPath.item)
+        cell.dataBind(item)
         return cell
     }
 }
